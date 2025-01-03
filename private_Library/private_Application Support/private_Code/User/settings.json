@@ -16,4 +16,7 @@
     "files.trimTrailingWhitespace": true,
     "search.showLineNumbers": true,
     "workbench.editor.tabSizing": "shrink",
+    "editor.pasteAs.preferences": [
+        "markdown.link"
+    ],
 }
