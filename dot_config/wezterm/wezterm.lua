@@ -16,15 +16,16 @@ config.color_scheme = "Dracula+"
 config.font_size = 13.0
 config.adjust_window_size_when_changing_font_size = true
 
--- キーバインド
+-- Key bind
 config.keys = {
-  -- ⌘ + でフォントサイズを大きくする
-  {
-      key = "+",
-      mods = "CMD|SHIFT",
-      action = wezterm.action.IncreaseFontSize,
-  },
-
+  { key = "+", mods = "CMD|SHIFT", action = wezterm.action.IncreaseFontSize, },
+  { key = 'UpArrow', mods = 'SHIFT', action = wezterm.action.ScrollByLine(-1) },
+  { key = 'DownArrow', mods = 'SHIFT', action = wezterm.action.ScrollByLine(1) },
+  { key = 'UpArrow', mods = 'CTRL|SHIFT', action = wezterm.action.ScrollByPage(-1) },
+  { key = 'DownArrow', mods = 'CTRL|SHIFT', action = wezterm.action.ScrollByPage(1) },
+  { key = '-', mods = 'ALT', action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' } },
+  { key = '¥', mods = 'ALT', action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' } },
+  { key = "x", mods = "ALT", action = wezterm.action.CloseCurrentPane{ confirm = true } },
 }
 
 -- and finally, return the configuration to wezterm
