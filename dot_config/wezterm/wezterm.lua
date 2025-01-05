@@ -26,6 +26,10 @@ config.keys = {
   { key = '-', mods = 'ALT', action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' } },
   { key = '¥', mods = 'ALT', action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' } },
   { key = "x", mods = "ALT", action = wezterm.action.CloseCurrentPane{ confirm = true } },
+  -- Alt + LeftArrow を Ctrl + Alt + B として送信
+  {key="LeftArrow", mods="ALT", action=wezterm.action{SendKey={key="b", mods="ALT|CTRL"}}},
+  -- Alt + RightArrow を Ctrl + Alt + F として送信
+  {key="RightArrow", mods="ALT", action=wezterm.action{SendKey={key="f", mods="ALT|CTRL"}}},
 }
 
 -- and finally, return the configuration to wezterm

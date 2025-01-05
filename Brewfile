@@ -1,4 +1,5 @@
 tap "homebrew/bundle"
+brew "asdf"
 brew "chezmoi"
 brew "git"
 brew "sheldon"
